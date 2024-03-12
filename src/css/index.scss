@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
 @import "./variables.scss";
 @import "./utilities.scss";
 
@@ -9,7 +11,286 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: $ff-primary;
+    font-size: 0.875rem;
+
+    min-height: 96vh;
+}
+
+h1 {
+    font-size: 2.75rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    line-height: 145%;
+}
+
+button {
+    background: none;
+    border: none;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    cursor: pointer;
+    font-family: $ff-primary;
+}
+
 img {
     display: block;
     max-width: 100%;
+}
+
+menu li {
+    list-style-type: none;
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}
+
+// Hero Section
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-block: 0.5rem;
+}
+
+.navigation {
+    // Dead Center it
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    menu {
+        display: flex;
+        gap: 0.25rem;
+        align-items: center;
+
+        li {
+            font-weight: 300;
+            padding: 0.325rem 0.75rem;
+            cursor: pointer;
+            border-radius: 2px;
+            transition: $transition-1;
+
+            &:hover {
+                background: rgb(244, 244, 244);
+            }
+        }
+    }
+}
+
+// Hero Section
+
+#hero {
+    .container {
+        margin-block: 1.75rem;
+
+        .text-content p {
+            margin-bottom: 0.75rem;
+        }
+    }
+}
+
+.banner {
+    background: url("../assets/gigachad\ expanded.png");
+    background-size: cover !important;
+    background-position: center !important;
+
+    width: 100%;
+    min-height: 415px;
+}
+
+// Features Section
+
+#features {
+    background: url("../assets/success-image.jpg");
+    padding-block: $section-padding;
+
+    color: white;
+
+    .text-content {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+
+        & > p {
+            margin-block: 1rem;
+        }
+
+        p {
+            font-weight: 200;
+        }
+    }
+}
+
+.features-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    // gap: 3rem;
+    gap: 1rem;
+
+    img {
+        margin-bottom: 0.75rem;
+    }
+
+    h3 {
+        margin-bottom: 0.65rem;
+    }
+}
+
+// Events
+
+#events {
+    padding-block: $section-padding;
+}
+
+.events {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    margin-top: 3.3rem;
+
+    img {
+        aspect-ratio: 3 / 2;
+    }
+
+    .tag {
+        margin-block: 0.5rem 0.7rem;
+    }
+
+    h3 {
+        margin-bottom: 0.35rem;
+    }
+}
+
+// Testimonials
+
+#testimonials {
+    background: url("../assets/improve.jpg");
+    color: white;
+
+    padding-block: $section-padding * 1.25;
+}
+
+.testimonials {
+    margin-top: 5rem;
+}
+
+.testimonial {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+
+    background: black;
+    padding: 2rem;
+    border-radius: 8px;
+
+    .stars {
+        display: flex;
+        gap: 0.25rem;
+    }
+
+    .info {
+        display: flex;
+        gap: 1rem;
+
+        img {
+            aspect-ratio: 1 / 1;
+            width: 50px;
+            border-radius: 50%;
+
+            object-fit: cover;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-block: 0.35rem;
+        }
+    }
+}
+
+// CTA
+
+#cta {
+    padding-block: $section-padding;
+    display: flex;
+    gap: 4rem;
+    justify-content: space-between;
+
+    form {
+        display: flex;
+        gap: 1rem;
+    }
+
+    input {
+        padding: 0.25rem 0.75rem;
+        border: 2px solid grey;
+        border-radius: 2px;
+
+        width: 100%;
+    }
+
+    .tagline {
+        font-size: 12px;
+    }
+}
+
+// Footer
+
+footer {
+    .top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        margin-block: 0 1.5rem;
+    }
+
+    .bottom,
+    .bottom menu {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .bottom {
+        margin-inline: auto;
+        width: fit-content;
+        gap: 1.75rem;
+
+        margin-block: 1.5rem;
+    }
+
+    .bottom menu li {
+        padding-bottom: 0.25rem;
+    }
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+
+    img {
+        width: 20px;
+    }
 }
