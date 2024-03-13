@@ -5,7 +5,6 @@ Taraki is a landing page site for the Taraki Community. They help people grow an
 ## Features
 
 -   Decent Design ( even though I'm not a designer )
--   Animations
 -   Hover Effects
 -   Fast Page Load
 -   100% Responsive
@@ -13,6 +12,4 @@ Taraki is a landing page site for the Taraki Community. They help people grow an
 
 ## Link
 
-This website is hosted [here]()
-
-## Screenshot
+This website is hosted [here](https://taraki.netlify.app/)
