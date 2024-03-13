@@ -38,7 +38,7 @@ export default function Features() {
                     </div>
                 </div>
 
-                <img src={successImage} alt="Success" />
+                <img src={successImage} alt="Success" className="image" />
             </div>
         </section>
     );

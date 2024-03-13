@@ -6,6 +6,19 @@ $ff-primary: "Inter", sans-serif;
 
 $transition-1: 0.3s all ease;
 
+// Layouts
+$mobile: 600px;
+
 // Misc
 
-$section-padding: 5rem;
+$section-padding-desktop: 5rem;
+$section-padding-mobile: 3.5rem;
+
+@mixin section-padding {
+    @media screen and (min-width: $mobile) {
+        padding-block: $section-padding-desktop;
+    }
+    @media screen and (max-width: $mobile) {
+        padding-block: $section-padding-mobile;
+    }
+}

@@ -70,6 +70,31 @@ header {
     margin-block: 0.5rem;
 }
 
+header > div {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.hamburger {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 0.25rem;
+
+    padding: 0.35rem;
+    border-radius: 4px;
+    cursor: pointer;
+
+    div {
+        border-bottom: 4px solid rgb(165, 165, 165);
+        width: 28px;
+    }
+}
+
+.hamburger:hover {
+    background: rgba($color: #000000, $alpha: 0.075);
+}
+
 .navigation {
     // Dead Center it
     position: absolute;
@@ -120,7 +145,8 @@ header {
 
 #features {
     background: url("../assets/success-image.jpg");
-    padding-block: $section-padding;
+    // padding-block: $section-padding;
+    @include section-padding;
 
     color: white;
 
@@ -136,6 +162,15 @@ header {
         p {
             font-weight: 200;
         }
+    }
+
+    .image {
+        object-fit: cover;
+        aspect-ratio: 1 / 1;
+        max-width: 85%;
+
+        border-radius: 10px;
+        place-self: end;
     }
 }
 
@@ -157,7 +192,7 @@ header {
 // Events
 
 #events {
-    padding-block: $section-padding;
+    @include section-padding;
 }
 
 .events {
@@ -169,6 +204,7 @@ header {
 
     img {
         aspect-ratio: 3 / 2;
+        width: 100%;
     }
 
     .tag {
@@ -186,7 +222,7 @@ header {
     background: url("../assets/improve.jpg");
     color: white;
 
-    padding-block: $section-padding * 1.25;
+    @include section-padding;
 }
 
 .testimonials {
@@ -231,7 +267,8 @@ header {
 // CTA
 
 #cta {
-    padding-block: $section-padding;
+    @include section-padding;
+
     display: flex;
     gap: 4rem;
     justify-content: space-between;
@@ -292,5 +329,166 @@ footer {
 
     img {
         width: 20px;
+    }
+}
+
+@media (max-width: $mobile) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2.15rem;
+    }
+
+    h3 {
+        font-size: 1.15rem;
+    }
+
+    p {
+        line-height: 135%;
+    }
+
+    button {
+        font-size: 12px;
+    }
+
+    // Header
+
+    header .navigation {
+        display: none;
+    }
+
+    .navigation {
+        menu {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+
+        li {
+            padding: 0 !important;
+
+            &:hover {
+                background: transparent !important;
+            }
+        }
+    }
+
+    // Hero Section
+
+    #hero {
+        .container {
+            margin-block: 2rem 3rem;
+        }
+
+        text-align: center;
+
+        .single-line {
+            margin-inline: auto;
+            margin-top: 1.5rem;
+        }
+
+        .banner {
+            display: none;
+        }
+    }
+
+    // Features
+
+    #features {
+        .image {
+            display: none;
+        }
+
+        .hot-card {
+            padding: 1rem;
+
+            img {
+                width: 20px;
+            }
+
+            p {
+                font-size: 12px;
+            }
+        }
+    }
+
+    .features-list {
+        gap: 0.5rem;
+    }
+
+    // Events
+
+    .events {
+        grid-template-columns: 1fr;
+    }
+
+    // Testimonials
+
+    .testimonials {
+        margin-top: 2.5rem;
+    }
+
+    .testimonial {
+        padding: 1.5rem;
+
+        .info {
+            img {
+                width: 40px;
+                height: 40px;
+            }
+
+            div {
+                padding-block: 0.25rem;
+                font-size: 12px;
+            }
+        }
+    }
+
+    // CTA
+
+    #cta {
+        gap: 1rem;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    // Footer
+
+    footer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        margin-bottom: 1.5rem;
+
+        .top {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 2rem;
+            margin: 0;
+
+            .navigation {
+                position: relative;
+                left: 0;
+                transform: translateX(0);
+            }
+        }
+
+        hr {
+            display: none;
+        }
+
+        .bottom,
+        .bottom menu {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.25rem;
+            justify-content: space-between;
+        }
+
+        .bottom {
+            margin: 0;
+        }
     }
 }

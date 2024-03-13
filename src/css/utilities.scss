@@ -10,6 +10,8 @@
 .btn {
     padding: 0.65rem 1.35rem;
     border-radius: 4px;
+
+    transition: $transition-1;
 }
 
 .btn-primary {
@@ -18,9 +20,17 @@
     color: white;
 }
 
+.btn-primary:hover {
+    background: rgb(36, 36, 36);
+}
+
 .btn-secondary {
     font-weight: 400;
     background: #f3f3f3;
+}
+
+.btn-secondary:hover {
+    background: #dedede;
 }
 
 .link {
@@ -83,6 +93,7 @@
 .single-line {
     display: flex;
     gap: 0.85rem;
+    width: fit-content;
 }
 
 // Misc
@@ -120,4 +131,24 @@
 
 .hot-card:hover {
     background: rgba(0, 0, 0, 0.35);
+}
+
+@media (max-width: $mobile) {
+    .container {
+        max-width: $mobile;
+        width: 92.5%;
+    }
+
+    // Layouts
+
+    .even-columns {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    // Buttons
+
+    .btn {
+        padding: 0.5rem 1.15rem;
+    }
 }
