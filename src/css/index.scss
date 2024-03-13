@@ -16,6 +16,7 @@ body {
     font-size: 0.875rem;
 
     min-height: 96vh;
+    overflow: hidden;
 }
 
 h1 {
@@ -75,24 +76,8 @@ header > div {
     gap: 0.5rem;
 }
 
-.hamburger {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    gap: 0.25rem;
-
-    padding: 0.35rem;
-    border-radius: 4px;
+.logo {
     cursor: pointer;
-
-    div {
-        border-bottom: 4px solid rgb(165, 165, 165);
-        width: 28px;
-    }
-}
-
-.hamburger:hover {
-    background: rgba($color: #000000, $alpha: 0.075);
 }
 
 .navigation {
@@ -357,6 +342,11 @@ footer {
 
     header .navigation {
         display: none;
+    }
+
+    .logo {
+        width: 30px;
+        height: 30px;
     }
 
     .navigation {
