@@ -83,7 +83,7 @@
 .even-columns {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 5rem;
+    gap: 3rem;
 
     align-items: center;
 }

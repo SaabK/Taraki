@@ -11,8 +11,8 @@ $mobile: 600px;
 
 // Misc
 
-$section-padding-desktop: 5rem;
-$section-padding-mobile: 3.5rem;
+$section-padding-desktop: 4.5rem;
+$section-padding-mobile: 3.25rem;
 
 @mixin section-padding {
     @media screen and (min-width: $mobile) {

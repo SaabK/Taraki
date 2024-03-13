@@ -32,14 +32,14 @@ export const testimonials = [
         occupation: "CEO, BlueWhale Inc.",
         image: guy1,
         testimonial:
-            "Taraki has truly transformed my life. The support and guidance I received from this community has helped me become a better version of myself.",
+            "Taraki has truly transformed my life forever. The support and guidance I received from this community has helped me become a better version of myself.",
     },
     {
         name: "Ibn Abdullah",
         occupation: "Professional Footballer",
         image: guy2,
         testimonial:
-            "Joining Taraki was the best decision I ever made. The positive energy and motivation I found within this community has had a profound impact on my personal growth.",
+            "Joining Taraki was the best decision I ever made. The positive energy I found within this community has had a profound impact on my personal growth.",
     },
 ];
 
